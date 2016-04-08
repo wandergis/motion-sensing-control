@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>体感控制demo</title>
+    <link href="//cdn.bootcss.com/leaflet/0.7.7/leaflet.css" rel="stylesheet">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        overflow: hidden;
+    }
+    
+    .title {
+        text-align: center;
+        background: #1BA598;
+        height: 40px;
+        line-height: 40px;
+        font-size: 30px;
+        color: #fff;
+    }
+    
+    #video,
+    #canvas {
+        bottom: 0;
+        position: absolute;
+        z-index: 100;
+    }
+    
+    #viewport {
+        top: 40px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        体感操作--左右移动你的脑袋试试
+    </div>
+    <div id="viewport">
+        <video id="video" width="320" height="240" preload autoplay loop muted></video>
+        <canvas id="canvas" width="320" height="240"></canvas>
+    </div>
+      <script src="//cdn.bootcss.com/leaflet/0.7.7/leaflet.js"></script>
+      <script src="build/build.min.js"></script>
+</body>
+
+</html>
